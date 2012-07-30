@@ -4,7 +4,7 @@ Pollster::Application.routes.draw do
   resources :answers
   resources :questions
 
-  map.connect 'poll/:name',:controller => "polls", :action => 'edit'
+  # map.connect 'poll/:name',:controller => "polls", :action => 'edit'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
