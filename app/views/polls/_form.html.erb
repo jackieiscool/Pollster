@@ -1,0 +1,16 @@
+<%= form_for(@polls) do |f| %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %><br />
+  </p>
+
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %><br />
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
