@@ -11,6 +11,49 @@
   </p>
 
   <p>
+    Please enter your questions here: <br/>
+    <%= f.fields_for :question do |ff| %>
+      <%= ff.label :description %>
+      <%= ff.text_field :description %>
+    <% end %>
+  </p>
+
+  <p>
+    Please enter an answer to your questions here: <br/>
+    <%= f.fields_for :answer do |ff|%>
+      <%= ff.label :description %>
+      <%= ff.text_field :description %>
+    <% end %>
+  </p>
+
+  <p>
+    Please enter an answer to your questions here: <br/>
+    <%= f.fields_for :answer do |ff|%>
+      <%= ff.label :description %>
+      <%= ff.text_field :description %>
+    <% end %>
+  </p>
+
+  <p>
+    Please enter an answer to your questions here: <br/>
+    <%= f.fields_for :answer do |ff|%>
+      <%= ff.label :description %>
+      <%= ff.text_field :description %>
+    <% end %>
+  </p>
+
+  <p>
+    Please enter an answer to your questions here: <br/>
+    <%= f.fields_for :answer do |ff|%>
+      <%= ff.label :description %>
+      <%= ff.text_field :description %>
+    <% end %>
+  </p>
+
+  <p>
     <%= f.submit %>
   </p>
 <% end %>
+
+
+

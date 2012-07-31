@@ -2,6 +2,9 @@ class Poll < ActiveRecord::Base
   attr_accessible :description, :name
 
   has_many :questions
+  accepts_nested_attributes_for :questions
+
+  has_many :answers, :through => :questions
 
   before_save :create_permalink
   before_save :create_namelink
