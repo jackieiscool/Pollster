@@ -1,4 +1,4 @@
-<%= form_for(@polls) do |f| %>
+<%= form_for(@poll) do |f| %>
 
   <p>
     <%= f.label :name %><br />
@@ -11,41 +11,17 @@
   </p>
 
   <p>
-    Please enter your questions here: <br/>
     <%= f.fields_for :question do |ff| %>
-      <%= ff.label :question, :description %>
-      <%= ff.text_field :question, :description %>
+      <%= ff.label :description, "Question" %>
+      <%= ff.text_area :description, :rows => 3 %>
+	  <%= ff.check_box :_destroy %>
+	  <% ff.label :_destroy, "Remove Question" %>
     <% end %>
   </p>
 
   <p>
-    Please enter an answer to your questions here: <br/>
     <%= f.fields_for :answer do |ff|%>
-      <%= ff.label :description %>
-      <%= ff.text_field :description %>
-    <% end %>
-  </p>
-
-  <p>
-    Please enter an answer to your questions here: <br/>
-    <%= f.fields_for :answer do |ff|%>
-      <%= ff.label :description %>
-      <%= ff.text_field :description %>
-    <% end %>
-  </p>
-
-  <p>
-    Please enter an answer to your questions here: <br/>
-    <%= f.fields_for :answer do |ff|%>
-      <%= ff.label :description %>
-      <%= ff.text_field :description %>
-    <% end %>
-  </p>
-
-  <p>
-    Please enter an answer to your questions here: <br/>
-    <%= f.fields_for :answer do |ff|%>
-      <%= ff.label :description %>
+      <%= ff.label :description, "Answer" %>
       <%= ff.text_field :description %>
     <% end %>
   </p>
