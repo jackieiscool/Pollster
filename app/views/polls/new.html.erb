@@ -2,4 +2,10 @@
 
 <%= render :partial => 'form' %>
 
+<% if flash[:alert] %>
+  <%= flash[:alert] %>
+<% end %>
+
+
+
 

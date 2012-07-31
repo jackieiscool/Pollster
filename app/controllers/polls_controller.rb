@@ -12,18 +12,24 @@ class PollsController < ApplicationController
 
     @polls.save
 
-    redirect_to new_poll_path
+    redirect_to polls_path
+      flash[:alert] = "The link to edit your page is... localhost:3000/polls/#{@polls.permalink}/edit"
+      flash[:notice] = "The link to take your poll is... localhot:3000/polls/#{@polls.namelink}"
   end
 
   def edit
-     @polls = Poll.find_by_name(params[:name])
+     @polls = Poll.find_by_permalink(params[:id])
+  end
+
+  def show
+    @polls = Poll.find_by_namelink(params[:id])
   end
 
   def update
     @polls = Poll.find(params[:id])
     @polls.update_attributes(params[:poll])
 
-    redirect_to new_poll_path
+    redirect_to polls_path
   end
 
   def destroy
