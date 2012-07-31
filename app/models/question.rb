@@ -1,5 +1,5 @@
 class Question < ActiveRecord::Base
-  attr_accessible :desripton, :poll_id
-  
-  belongs_to: poll
+  attr_accessible :description, :poll_id
+
+  belongs_to :poll
 end

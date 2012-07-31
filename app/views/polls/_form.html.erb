@@ -13,8 +13,8 @@
   <p>
     Please enter your questions here: <br/>
     <%= f.fields_for :question do |ff| %>
-      <%= ff.label :description %>
-      <%= ff.text_field :description %>
+      <%= ff.label :question, :description %>
+      <%= ff.text_field :question, :description %>
     <% end %>
   </p>
 
