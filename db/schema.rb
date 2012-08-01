@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731000833) do
+ActiveRecord::Schema.define(:version => 20120801002456) do
 
   create_table "answers", :force => true do |t|
     t.string   "description"
@@ -22,9 +22,8 @@ ActiveRecord::Schema.define(:version => 20120731000833) do
 
   create_table "polls", :force => true do |t|
     t.string   "name"
-    t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "permalink"
     t.string   "namelink"
   end

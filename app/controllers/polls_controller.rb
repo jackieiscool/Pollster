@@ -5,7 +5,10 @@ class PollsController < ApplicationController
 
   def new
     @poll = Poll.new
-    3.times { @poll.questions.build }
+    3.times do
+      question = @poll.questions.build
+      4.times { question.answers.build }
+    end
   end
 
   def create

@@ -6,7 +6,12 @@ gem 'rails', '3.2.6'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
 gem 'sqlite3'
+end
 
+group :test, :development do
+  gem 'rspec-rails', "~> 2.0"
+  gem 'simplecov'
+  gem 'shoulda-matchers'
 end
 
 group :production do
