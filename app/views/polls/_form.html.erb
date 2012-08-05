@@ -1,23 +1,20 @@
-<%= form_for @poll do |f| %>
 
+<%= form_for [@poll] do |f| %>
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %><br />
   </p>
 
-  <% f.fields_for :question do |builder| %>
+  <%= f.fields_for :question do |builder| %>
   <p>
-    <%= builder.label :description, "Question" %>
-    <%= builder.text_area :description, :rows => 3 %>
-    <%= builder.check_box :_destroy %>
-    <%= builder.label :_destroy, "Remove Question" %>
+    <%= render 'question_fields', :f => builder %>
   </p>
   <% end %>
 
   <p>
     <%= f.submit %>
   </p>
-<% end %>
 
+<% end %>
 
 

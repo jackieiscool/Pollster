@@ -1,6 +1,7 @@
 class PollsController < ApplicationController
 
   def index
+    @polls = Poll.all
   end
 
   def new
@@ -12,15 +13,17 @@ class PollsController < ApplicationController
   end
 
   def create
-    params[:poll].delete(:question)
-    params[:poll].delete(:answer)
+     params[:poll].delete(:answers)
     @poll = Poll.new(params[:poll])
 
-    @poll.save
-
-    redirect_to polls_path
-      flash[:alert] = "The link to edit your page is... localhost:3000/polls/#{@poll.permalink}/edit"
-      flash[:notice] = "The link to take your poll is... localhost:3000/polls/#{@poll.id}"
+    if @poll.save
+      redirect_to polls_path
+        flash[:alert] = "The link to edit your page is... localhost:3000/polls/#{@poll.permalink}/edit"
+        flash[:notice] = "The link to take your poll is... localhost:3000/polls/#{@poll.id}"
+    else
+      # flash{:error] = "You must enter a def title"
+        render 'new'
+    end
   end
 
   def edit
@@ -28,7 +31,7 @@ class PollsController < ApplicationController
   end
 
   def show
-    @poll = Poll.find_by_namelink(params[:id])
+    @poll = Poll.find(params[:id])
   end
 
   def update
@@ -40,4 +43,6 @@ class PollsController < ApplicationController
 
   def destroy
   end
+
 end
+

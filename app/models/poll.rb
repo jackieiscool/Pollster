@@ -1,5 +1,5 @@
 class Poll < ActiveRecord::Base
-  attr_accessible :description, :name, :question, :answer
+  attr_accessible :description, :name, :question, :answer, :questions_attributes
 
   has_many :questions, :dependent => :destroy
   accepts_nested_attributes_for :questions,

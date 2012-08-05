@@ -2,3 +2,8 @@
   <%= ff.label :description %>
   <%= ff.text_field :description %>
 <% end %>
+
+<%= builder.label :description, "Question" %>
+<%= builder.text_area :description, :rows => 3 %>
+<%= builder.check_box :_destroy %>
+<%= builder.label :_destroy, "Remove Question" %>
