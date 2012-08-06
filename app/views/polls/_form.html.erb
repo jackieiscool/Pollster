@@ -1,20 +1,18 @@
+<%= form_for @poll do |f| %>
+  <div class ="field">
+    <p>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %><br />
+    </p>
 
-<%= form_for [@poll] do |f| %>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %><br />
-  </p>
-
-  <%= f.fields_for :question do |builder| %>
-  <p>
-    <%= render 'question_fields', :f => builder %>
-  </p>
+    <%= f.fields_for :question do |builder| %>
+      <%= render 'question_fields', :f => builder %>
+  </div>
   <% end %>
 
-  <p>
+  <div class="actions">
     <%= f.submit %>
-  </p>
-
+  </div>
 <% end %>
 
 

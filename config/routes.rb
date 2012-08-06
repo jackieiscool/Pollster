@@ -3,11 +3,11 @@ Pollster::Application.routes.draw do
   root :to => "polls#index"
 
   resources :polls do
-    resources :questions, :only => [:create]
+    #resources :questions, :only => [:create]
     resources :answers, :only => [:new, :create]
   end
 
-  resources :questions, :only => [:show, :edit, :update, :destroy]
+  resources :questions#, :only => [:show, :edit, :update, :destroy]
   resources :answers #:except => [:index, :new, :create]
 
   # map.app 'poll/:name',:controller => "polls", :action => 'edit'

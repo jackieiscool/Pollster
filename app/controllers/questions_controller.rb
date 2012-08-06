@@ -1,6 +1,12 @@
 class QuestionsController < ApplicationController
+
   def new
+    @poll = Poll.find(params[:poll_id])
+
     @question = Question.new
+    respond_to do |format|
+      format.js {render :action => "new" }
+    end
   end
 
   def create

@@ -6,23 +6,21 @@ class PollsController < ApplicationController
 
   def new
     @poll = Poll.new
-    3.times do
-      question = @poll.questions.build
-      4.times { question.answers.build }
-    end
+
+     question = @poll.questions.build
+    #   4.times { question.answers.build }
+
   end
 
   def create
-     params[:poll].delete(:answers)
+     # params[:poll].delete(:answers)
     @poll = Poll.new(params[:poll])
-
     if @poll.save
-      redirect_to polls_path
+        redirect_to polls_path
         flash[:alert] = "The link to edit your page is... localhost:3000/polls/#{@poll.permalink}/edit"
         flash[:notice] = "The link to take your poll is... localhost:3000/polls/#{@poll.id}"
     else
-      # flash{:error] = "You must enter a def title"
-        render 'new'
+      render 'new'
     end
   end
 
@@ -42,6 +40,9 @@ class PollsController < ApplicationController
   end
 
   def destroy
+    @poll = Poll.find(params[:id])
+    @poll.destroy
+    redirect_to polls_path
   end
 
 end

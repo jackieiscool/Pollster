@@ -5,16 +5,30 @@
 
 <%= form_for @poll do |f| %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.fields_for :questions do |builder| %>
     <p>
-    <%= builder.label :question %>
-    <%= builder.text_field :description %>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %><br />
     </p>
-  <% end %>
+
+    <%= f.fields_for :questions, @poll.questions do |builder| %>
+      <%#= render 'question_fields', :f => builder %>
+
+      <%= builder.label :description, "Question" %>
+      <%= builder.text_area :description, :rows => 3 %>
+      <%= builder.check_box :_destroy %>
+      <%= builder.label :_destroy, "Remove Question" %>
+
+
+    <% end %>
 
   <%= f.submit %>
 
 <% end %>
+
+
+<p><%= link_to "+ Question", new_question_path, :remote => true %></p><br />
+
+
+
+
+
