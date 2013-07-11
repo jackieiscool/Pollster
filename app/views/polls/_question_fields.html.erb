@@ -1,11 +1,10 @@
 <p>
   <%= f.label :description, "Question" %>
   <%= f.text_area :description, :rows => 3 %>
-  <%= f.check_box :_destroy %>
-  <%= f.label :_destroy, "Remove Question" %>
 </p>
 
 
 <%= f.fields_for :answers do |builder|%>
-  <%= render 'answer_fields', :f => builder %>
+  <%= builder.label :description, "Answer" %>
+   <%= builder.text_field :description %>
 <% end %>

@@ -12,6 +12,7 @@ group :test, :development do
   gem 'rspec-rails', "~> 2.0"
   gem 'simplecov'
   gem 'shoulda-matchers'
+  gem 'factory_girl'
 end
 
 group :production do

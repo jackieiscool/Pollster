@@ -1,20 +1,3 @@
 <h1>Create a Poll</h1>
-<% if flash[:alert] %>
-  <%= flash[:alert] %>
-<% end %>
 
-<%= form_for @poll do |f| %>
-
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.fields_for :questions do |builder| %>
-    <p>
-    <%= builder.label :question %>
-    <%= builder.text_field :description %>
-    </p>
-  <% end %>
-
-  <%= f.submit %>
-
-<% end %>
+<%= render :partial => 'form' %>

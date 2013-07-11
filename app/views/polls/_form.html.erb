@@ -1,11 +1,11 @@
 
-<%= form_for [@poll] do |f| %>
+<%= form_for @poll do |f| %>
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %><br />
   </p>
 
-  <%= f.fields_for :question do |builder| %>
+  <%= f.fields_for :questions do |builder| %>
   <p>
     <%= render 'question_fields', :f => builder %>
   </p>

@@ -1,1 +1,19 @@
-<h1>Stuff Goes Here</h1>
+<h1>Take Poll</h1>
+
+  <%= @poll.name %>
+  <%= form_tag() do %>
+    <ul>
+    <% @poll.questions.each do |question| %>
+      <li> <%= question.description %> </li>
+      <ol>
+        <% question.answers.each do |answer| %>
+        <li> 
+          <%= label_tag(:answer, answer.description) %> 
+          <%= check_box_tag(:answer) %> 
+        </li>
+        <% end %>
+      </ol>
+    <% end %>
+    </ul>
+    <%= submit_tag("Submit") %>
+  <% end %>

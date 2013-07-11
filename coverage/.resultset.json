@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/apprentice/Desktop/Pollster_2/app/controllers/answers_controller.rb": [
+      "/Users/jacquelineherrlin/Pollster/app/controllers/answers_controller.rb": [
         1,
         1,
         null,
@@ -16,122 +16,132 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/Pollster_2/app/controllers/application_controller.rb": [
+      "/Users/jacquelineherrlin/Pollster/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/Users/apprentice/Desktop/Pollster_2/app/helpers/application_helper.rb": [
+      "/Users/jacquelineherrlin/Pollster/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/Desktop/Pollster_2/app/helpers/answer_helper.rb": [
+      "/Users/jacquelineherrlin/Pollster/app/helpers/answer_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/Desktop/Pollster_2/app/helpers/poll_helper.rb": [
+      "/Users/jacquelineherrlin/Pollster/app/helpers/poll_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/Desktop/Pollster_2/app/helpers/question_helper.rb": [
+      "/Users/jacquelineherrlin/Pollster/app/helpers/question_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/Desktop/Pollster_2/app/models/answer.rb": [
+      "/Users/jacquelineherrlin/Pollster/app/models/answer.rb": [
         1,
         1,
         null,
         1,
         null
       ],
-      "/Users/apprentice/Desktop/Pollster_2/app/controllers/polls_controller.rb": [
+      "/Users/jacquelineherrlin/Pollster/app/controllers/polls_controller.rb": [
         1,
         null,
         1,
-        null,
-        null,
         1,
-        0,
-        0,
         null,
         null,
         1,
         0,
         0,
         0,
-        null,
         0,
         null,
-        0,
-        0,
-        0,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        2,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
         null,
         null,
         1,
         0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
         0,
         null,
         0,
         null,
         null,
         1,
+        null,
+        null,
         null,
         null
       ],
-      "/Users/apprentice/Desktop/Pollster_2/app/models/poll.rb": [
+      "/Users/jacquelineherrlin/Pollster/app/models/poll.rb": [
         1,
         1,
         null,
         1,
         1,
         null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/Users/apprentice/Desktop/Pollster_2/app/controllers/questions_controller.rb": [
-        1,
         1,
         null,
         null,
         1,
-        null,
-        null,
-        1,
-        null,
         null,
         1,
         null,
         null
       ],
-      "/Users/apprentice/Desktop/Pollster_2/app/models/question.rb": [
+      "/Users/jacquelineherrlin/Pollster/app/controllers/questions_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/jacquelineherrlin/Pollster/app/models/question.rb": [
         1,
         1,
         null,
         1,
         1,
         1,
-        null,
         null,
         null
       ]
     },
-    "timestamp": 1343776120
+    "timestamp": 1373571627
   }
 }

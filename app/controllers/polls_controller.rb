@@ -17,9 +17,7 @@ class PollsController < ApplicationController
     @poll = Poll.new(params[:poll])
 
     if @poll.save
-      redirect_to polls_path
-        flash[:alert] = "The link to edit your page is... localhost:3000/polls/#{@poll.permalink}/edit"
-        flash[:notice] = "The link to take your poll is... localhost:3000/polls/#{@poll.id}"
+      redirect_to @poll
     else
       # flash{:error] = "You must enter a def title"
         render 'new'
@@ -27,7 +25,7 @@ class PollsController < ApplicationController
   end
 
   def edit
-     @poll = Poll.find_by_permalink(params[:id])
+     
   end
 
   def show
